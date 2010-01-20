@@ -1,0 +1,23 @@
+<h1>Playlists for <%=h @user.name %></h1>
+
+<% @playlists.each do |p| %>
+  <div class="playlist">
+    <p>
+      <strong>Name:</strong>
+      <%=h p.name %>
+    </p>
+
+    <p>
+      <strong>Books:</strong>
+    </p>
+    <ul>
+    <% p.audio_files.each do |f| %>
+      <li>
+        <a href="<%= url_for(f) %>"><%=h f.title %></a> by <%=h f.author %>
+      </li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= link_to 'Back', user_path(@user) %>

@@ -6,3 +6,5 @@ db/*.sqlite3
 public/assets
 public/javascripts/all.js
 public/stylesheets/all.css
+.*.sw?
+.\#*

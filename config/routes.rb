@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :parts
 
+  map.connect 'users/login', :controller => 'users', :action => 'login'
+  map.connect 'users/logout', :controller => 'users', :action => 'logout'
   map.resources :users
 
   map.resources :playlists

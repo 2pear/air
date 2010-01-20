@@ -1,0 +1,17 @@
+<h1>Parts for <%=h @audio_file.title %></h1>
+
+<% @parts.each do |p| %>
+  <div class="part">
+    <p>
+      <strong>Part number:</strong>
+      <%=h p.partnumber %>
+    </p>
+
+    <p>
+      <strong>Filename:</strong>
+      <%=h p.filename %>
+    </p>
+  </div>
+<% end %>
+
+<%= link_to 'Back', audio_file_path(@audio_file) %>

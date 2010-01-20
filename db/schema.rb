@@ -40,11 +40,6 @@ ActiveRecord::Schema.define(:version => 20100120171034) do
     t.datetime "updated_at"
   end
 
-  create_table "playlists_audio_files", :id => false, :force => true do |t|
-    t.integer "playlist_id"
-    t.integer "audio_file_id"
-  end
-
   create_table "users", :force => true do |t|
     t.string   "login"
     t.string   "pass"
