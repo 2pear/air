@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  filename: MyString
+  partnumber: 1
+
+two:
+  filename: MyString
+  partnumber: 1

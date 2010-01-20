@@ -38,4 +38,10 @@ Rails::Initializer.run do |config|
   # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
+
+  # cookie secret (yum)
+  config.application_controller.session = {
+    :key => '_app_session',
+    :secret => 'cb10f181ba67862d43d1953a65f9533de766b8940120aa607a4ee6c800f9bda1369c42c0557197d4'
+  }
 end
