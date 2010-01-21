@@ -1,0 +1,20 @@
+%h1= "Playlists for #{@user.name}"
+
+- @playlists.each do |p|
+  %table
+    %thead
+      %tr
+        %th{ :colspan => 3 }= p.name
+      %tr
+        %th #
+        %th Title
+        %th Author
+    %tbody
+      - p.audio_files.each_with_index do |f, i|
+        %tr
+          %td= i
+          %td
+            %a{ :href => audio_file_path(f) }= f.title
+          %td= f.author
+
+= link_to 'Back', user_path(@user)
