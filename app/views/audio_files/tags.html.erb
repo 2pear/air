@@ -1,0 +1,7 @@
+<h1>Tags for <%=h @audio_file.title %></h1>
+
+<% @tags.each do |t| %>
+  <p><%=h t.name %></p>
+<% end %>
+
+<%= link_to 'Back', audio_file_path(@audio_file) %>

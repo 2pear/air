@@ -39,6 +39,20 @@ class AudioFilesController < ApplicationController
     end
   end
 
+  # GET /audio_files/tags/1
+  # GET /audio_files/tags/1.xml
+  # GET /audio_files/tags/1.json
+  def tags
+    @audio_file = AudioFile.find(params[:id])
+    @tags = @audio_file.tags
+
+    respond_to do |format|
+      format.html # tags.html.erb
+      format.xml { render :xml => @tags }
+      format.json { render :json => @tags }
+    end
+  end
+
   # POST /audio_files.xml
   # POST /audio_files.json
   def create

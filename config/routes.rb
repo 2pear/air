@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.connect 'tags/search/:query', :controller => :tags, :action => :search
+  map.connect 'tags/search/:query.:format', :controller => :tags, :action => :search
+  map.resources :tags
+
   map.resources :parts
 
   map.connect 'users/login', :controller => :users, :action => :login

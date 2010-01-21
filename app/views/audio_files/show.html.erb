@@ -21,6 +21,9 @@
 
 <!-- <%= link_to 'Edit', edit_audio_file_path(@audio_file) %> | -->
 <%= link_to 'Parts', { :controller => :audio_files,
-                      :action => :parts,
+                       :action => :parts,
+                       :id => @audio_file } %> |
+<%= link_to 'Tags', { :controller => :audio_files,
+                      :action => :tags,
                       :id => @audio_file } %> |
 <%= link_to 'Back', audio_files_path %>
