@@ -1,0 +1,6 @@
+%h1= "Tags for #{@audio_file.title}"
+
+- @tags.each do |t|
+  %p= t.name
+
+= link_to 'Back', audio_file_path(@audio_file)

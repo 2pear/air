@@ -1,0 +1,18 @@
+%p
+  %b Title:
+  = @audio_file.title
+%p
+  %b Author:
+  = @audio_file.author
+%p
+  %b Date:
+  = @audio_file.date
+%p
+  %b Price:
+  = @audio_file.price
+
+= link_to 'Parts', { :controller => :audio_files, :action => :parts, :id => @audio_file }
+|
+= link_to 'Tags', { :controller => :audio_files, :action => :tags, :id => @audio_file }
+|
+= link_to 'Back', audio_files_path
