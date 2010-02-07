@@ -1,0 +1,30 @@
+%h1 Editing user
+
+- form_for(@user) do |f|
+  = f.error_messages
+  %table
+    %tbody
+      %tr
+        %td= f.label :login
+        %td= f.text_field :login
+      %tr
+        %td= f.label :password
+        %td= f.password_field :password
+      %tr
+        %td= f.label :password_confirmation
+        %td= f.password_field :password_confirmation
+      %tr
+        %td= f.label :name
+        %td= f.text_field :name
+      %tr
+        %td= f.label :email
+        %td= f.text_field :email
+      %tr
+        %td= f.label :age
+        %td= f.text_field :age
+    %tfoot
+      %tr
+        %td{ :colspan => 2 }= f.submit 'Update'
+
+= link_to 'Show', @user
+= link_to 'Back', users_path

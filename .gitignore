@@ -1,0 +1,11 @@
+.DS_Store
+log/*.log
+tmp/**/*
+config/database.yml
+db/*.sqlite3
+public/assets
+public/javascripts/all.js
+public/stylesheets/all.css
+public/stylesheets/scaffold.css
+.*.sw?
+.\#*

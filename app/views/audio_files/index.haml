@@ -1,0 +1,18 @@
+%h1 Listing audio files
+
+%table
+  %thead
+    %tr
+      %th Title
+      %th Author
+      %th Date
+      %th Price
+  %tbody
+    - @audio_files.each do |audio_file|
+      %tr
+        %td= audio_file.title
+        %td= audio_file.author
+        %td= audio_file.date
+        %td= audio_file.price
+        %td= link_to 'Show', audio_file
+        %td= link_to 'Destroy', audio_file, :confirm => 'Are you sure?', :method => :delete

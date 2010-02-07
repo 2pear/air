@@ -1,0 +1,12 @@
+%h1= "Parts for #{@audio_file.title}"
+
+- @parts.each do |p|
+  .part
+    %p
+      %strong Part number:
+      = p.partnumber
+    %p
+      %strong Filename:
+      = p.filename
+
+= link_to 'Back', audio_file_path(@audio_file)
